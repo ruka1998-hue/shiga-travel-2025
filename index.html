@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本水之國-滋賀十日行</title>
+    <style>
+        :root {
+            --primary-color: #0077b6;
+            --secondary-color: #00b4d8;
+            --bg-color: #f0f8ff;
+            --text-color: #333;
+        }
+        body {
+            font-family: 'Segoe UI', 'Microsoft JhengHei', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        .sidebar {
+            width: 120px;
+            background-color: white;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+        }
+        .sidebar button {
+            display: block;
+            width: 100%;
+            padding: 15px 10px;
+            border: none;
+            background: none;
+            text-align: left;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+        }
+        .sidebar button:hover, .sidebar button.active {
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: bold;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: white;
+        }
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .card {
+            background: #fff;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-radius: 4px;
+        }
+        .time {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+            border-top: 1px dashed #eee;
+            padding-top: 5px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                display: flex;
+                overflow-x: auto;
+                border-right: none;
+                border-top: 1px solid #ddd;
+                order: 2;
+            }
+            .sidebar button {
+                flex: 0 0 auto;
+                width: auto;
+                white-space: nowrap;
+                border-bottom: none;
+                border-right: 1px solid #eee;
+            }
+            .content {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>日本水之國-滋賀十日行</h1>
+        <p>2025.05.07 - 2025.05.16</p>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <button class="active" onclick="openTab(event, 'day1')">D1 大阪</button>
+            <button onclick="openTab(event, 'day2')">D2 大阪</button>
+            <button onclick="openTab(event, 'day3')">D3 京都</button>
+            <button onclick="openTab(event, 'day4')">D4 丹後</button>
+            <button onclick="openTab(event, 'day5')">D5 大津</button>
+            <button onclick="openTab(event, 'day6')">D6 滋賀</button>
+            <button onclick="openTab(event, 'day7')">D7 彥根</button>
+            <button onclick="openTab(event, 'day8')">D8 近江</button>
+            <button onclick="openTab(event, 'day9')">D9 京都</button>
+            <button onclick="openTab(event, 'day10')">D10 大阪</button>
+        </nav>
+
+        <main class="content">
+            <div id="day1" class="tab-content active">
+                <h2>5/07 (Wed) - 大阪市區觀光</h2>
+                <div class="card"><div class="time">11:20-12:10</div>抵達關西空港 (10:30)，搭乘南海難波駅空港急行 [cite: 658]。</div>
+                <div class="card"><div class="time">12:30-14:00</div>難波駅 E3 會合寄放行李，前往蟹道樂本店 (預約 12:30) [cite: 658]。</div>
+                <div class="card"><div class="time">14:10-16:00</div>逛日本橋商圈與黑門市場 [cite: 658]。</div>
+                <div class="card"><div class="time">17:30-21:00</div>前往大阪京瓷巨蛋觀賽 [cite: 658]。</div>
+            </div>
+
+            <div id="day2" class="tab-content">
+                <h2>5/08 (Thu) - 萬博紀念公園 & EXPO 2025</h2>
+                <div class="card"><div class="time">10:00-10:30</div>參觀太陽之塔 (預約 10:00 入場) [cite: 722]。</div>
+                <div class="card"><div class="time">12:50-13:00</div>抵達夢洲駅，開始參觀 EXPO 2025 [cite: 722]。</div>
+                <div class="card"><div class="time">15:00-16:00</div>參觀 PASONA、TECH WORLD 企業館，觀賞水舞表演 [cite: 722]。</div>
+            </div>
+
+            <div id="day3" class="tab-content">
+                <h2>5/09 (Fri) - 京都寺社巡禮</h2>
+                <div class="card"><div class="time">07:50-08:50</div>參拜西本願寺 [cite: 772]。</div>
+                <div class="card"><div class="time">10:00-12:00</div>京都御苑、仙洞寓所 (預約 11:00) [cite: 772]。</div>
+                <div class="card"><div class="time">16:30-18:30</div>前往伏見稻荷大社 [cite: 772]。</div>
+            </div>
+
+            <div id="day4" class="tab-content">
+                <h2>5/10 (Sat) - 丹後天橋立與伊根</h2>
+                <div class="card"><div class="time">10:15-11:00</div>搭乘箱型纜車前往天橋立飛龍觀迴廊 [cite: 837]。</div>
+                <div class="card"><div class="time">13:40-14:20</div>元伊勢籠神社參拜 [cite: 837]。</div>
+                <div class="card"><div class="time">14:50-16:15</div>前往伊根舟屋群，搭乘 15:00 觀光船 [cite: 837]。</div>
+            </div>
+
+            <div id="day5" class="tab-content">
+                <h2>5/11 (Sun) - 比叡山延曆寺巡禮 [cite: 908]</h2>
+                <div class="card"><div class="time">06:40-07:30</div>參觀東本願寺 。</div>
+                <div class="card"><div class="time">09:00-10:00</div>方廣寺參觀 。</div>
+                <div class="card"><div class="time">11:50-14:50</div>比叡山延曆寺巡禮 (搭乘日本最長坂本纜車) 。</div>
+                <div class="card"><div class="time">15:10-17:00</div>日吉大社 (16:30 關門) 與舊竹林院參觀 。</div>
+                <div class="card"><div class="time">18:00-20:00</div>琵琶湖飯店 Check-in，晚餐於お食事処アケミ 。</div>
+            </div>
+
+            <div id="day6" class="tab-content">
+                <h2>5/12 (Mon) - 琵琶湖湖西開車遊 [cite: 984]</h2>
+                <div class="card"><div class="time">07:30-08:30</div>Orix 租車 (大津駅南口店) [cite: 987]。</div>
+                <div class="card"><div class="time">09:00-10:00</div>近江神宮參拜 [cite: 987]。</div>
+                <div class="card"><div class="time">10:50-11:30</div>參觀浮御堂與坂本城址公園 [cite: 987]。</div>
+                <div class="card"><div class="time">13:00-14:00</div>白鬚神社參拜與湖上鳥居絕景 [cite: 987]。</div>
+                <div class="card"><div class="time">15:00-17:30</div>賤ヶ岳吊椅纜車與長濱黑壁廣場 [cite: 987]。</div>
+                <div class="card"><div class="time">18:30-20:30</div>晚餐：鮎茶屋かわせ (烤香魚料理) [cite: 987]。</div>
+            </div>
+
+            <div id="day7" class="tab-content">
+                <h2>5/13 (Tue) - 竹生島與彥根古城 [cite: 1041]</h2>
+                <div class="card"><div class="time">08:20-11:30</div>搭乘觀光船進行竹生島巡遊 (08:50 出發) [cite: 1044]。</div>
+                <div class="card"><div class="time">11:40-12:40</div>長濱城博物館參觀 [cite: 1044]。</div>
+                <div class="card"><div class="time">13:20-15:50</div>國寶彥根城巡禮與夢京橋城堡大道購物 [cite: 1044]。</div>
+                <div class="card"><div class="time">16:20-17:00</div>參觀豐鄉小學校 (K-ON! 聖地) [cite: 1044]。</div>
+                <div class="card"><div class="time">17:30-19:00</div>晚餐：うなぎ 炭櫓 (近江鰻魚飯) [cite: 1044]。</div>
+            </div>
+
+            <div id="day8" class="tab-content">
+                <h2>5/14 (Wed) - 近江八幡水鄉之美 [cite: 1103]</h2>
+                <div class="card"><div class="time">08:10-10:50</div>安土城跡與天主信長之館參觀 [cite: 1104]。</div>
+                <div class="card"><div class="time">11:10-12:50</div>La Collina 年輪蛋糕園區漫步 [cite: 1104]。</div>
+                <div class="card"><div class="time">13:10-15:00</div>日牟禮八幡宮與八幡堀遊船 (14:20 出發) [cite: 1104]。</div>
+                <div class="card"><div class="time">15:10-16:40</div>近江八幡城跡 (八幡山纜車) [cite: 1104]。</div>
+                <div class="card"><div class="time">19:00-21:30</div>大津還車，晚餐：松喜屋 (近江牛) [cite: 1104]。</div>
+            </div>
+
+            <div id="day9" class="tab-content">
+                <h2>5/15 (Thu) - 京都經典再現 [cite: 1170]</h2>
+                <div class="card"><div class="time">08:00-09:10</div>石山寺參拜 (《源氏物語》靈感地) [cite: 1172]。</div>
+                <div class="card"><div class="time">10:30-12:30</div>高台寺與安井金比羅宮 (緣切緣結) [cite: 1172]。</div>
+                <div class="card"><div class="time">13:30-14:40</div>御金神社與逛花見小路 [cite: 1172]。</div>
+                <div class="card"><div class="time">15:20-17:00</div>石清水八幡宮 (日本三大八幡宮) [cite: 1172]。</div>
+                <div class="card"><div class="time">18:15-20:30</div>晚餐：燒肉力丸 (千日前店)，Check-in 大阪飯店 [cite: 1172]。</div>
+            </div>
+
+            <div id="day10" class="tab-content">
+                <h2>5/16 (Fri) - 大阪最終採買與返台 [cite: 1231]</h2>
+                <div class="card"><div class="time">05:20-07:20</div>清晨木津市場 (海鮮丼) 與難波八坂神社參拜 [cite: 1233]。</div>
+                <div class="card"><div class="time">08:15-09:10</div>Nest & Rise 飯店退房，搭乘南海特急前往關西機場 [cite: 1233]。</div>
+                <div class="card"><div class="time">09:10-11:10</div>機場免稅店最後採買，11:10 飛機起飛 [cite: 1233]。</div>
+                <div class="card"><div class="time">13:10-15:40</div>13:10 抵達桃園國際機場，平安返家 [cite: 1233]。</div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function openTab(evt, dayId) {
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            var tablinks = document.getElementById("sidebar").getElementsByTagName("button");
+            for (var i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            var selectedTab = document.getElementById(dayId);
+            selectedTab.style.display = "block";
+            void selectedTab.offsetWidth;
+            selectedTab.classList.add("active");
+            evt.currentTarget.classList.add("active");
+            // 手機版點選後自動捲回頂部
+            document.querySelector('.content').scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
