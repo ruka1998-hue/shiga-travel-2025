@@ -1,0 +1,1 @@
+# shiga-travel-2025
